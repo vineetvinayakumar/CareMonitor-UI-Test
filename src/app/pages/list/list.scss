@@ -1,0 +1,86 @@
+// Variables
+$bg-page: #f4f6fb;
+$text-muted: #6b7280;
+$divider: #e5e7eb;
+
+.list-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0 24px;
+
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+}
+
+.list-container {
+  min-height: calc(100vh - 64px);
+  padding: 32px;
+  background-color: $bg-page;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  .loading-state {
+    margin-top: 80px;
+    text-align: center;
+    color: $text-muted;
+
+    p {
+      margin-top: 12px;
+      font-size: 14px;
+    }
+  }
+
+  .list-card {
+    width: 100%;
+    max-width: 720px;
+    border-radius: 14px;
+    padding: 8px 0;
+    animation: fadeIn 0.3s ease;
+
+    mat-list {
+      padding: 0;
+
+      .list-item {
+        padding: 16px 24px;
+        border-bottom: 1px solid $divider;
+        transition: background-color 0.2s ease;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &:hover {
+          background-color: #f9fafb;
+        }
+
+        .item-title {
+          font-size: 16px;
+          font-weight: 600;
+          color: #111827;
+        }
+
+        .item-description {
+          font-size: 14px;
+          color: $text-muted;
+        }
+      }
+    }
+  }
+}
+
+/* Entrance animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

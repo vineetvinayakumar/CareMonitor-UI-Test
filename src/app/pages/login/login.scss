@@ -1,0 +1,119 @@
+// Color & spacing variables
+$bg-gradient-start: #f5f7fa;
+$bg-gradient-end: #e4e9f2;
+$text-muted: #6b7280;
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    $bg-gradient-start,
+    $bg-gradient-end
+  );
+
+  .login-card {
+    width: 100%;
+    max-width: 380px;
+    padding: 16px;
+    border-radius: 14px;
+    animation: fadeIn 0.4s ease-in-out;
+    background: #ffffff;
+
+    mat-card-header {
+      text-align: center;
+      margin-bottom: 8px;
+
+      mat-card-title {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      mat-card-subtitle {
+        font-size: 14px;
+        color: $text-muted;
+      }
+    }
+
+    mat-card-content {
+      margin-top: 12px;
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        .full-width {
+          width: 100%;
+          margin-bottom: 16px;
+        }
+
+        .login-btn {
+          height: 48px;
+          margin-top: 8px;
+          font-size: 16px;
+          font-weight: 500;
+          border-radius: 8px;
+          text-transform: none;
+        }
+      }
+    }
+  }
+}
+
+/* Entrance animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Button color variables
+$btn-primary-start: #4f46e5; // Indigo
+$btn-primary-end: #6366f1;
+$btn-hover-start: #4338ca;
+$btn-hover-end: #4f46e5;
+
+.login-btn {
+  background: linear-gradient(
+    135deg,
+    $btn-primary-start,
+    $btn-primary-end
+  );
+  color: #ffffff;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-transform: none;
+  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.35);
+  transition: all 0.25s ease;
+
+  &:hover {
+    background: linear-gradient(
+      135deg,
+      $btn-hover-start,
+      $btn-hover-end
+    );
+    box-shadow: 0 10px 22px rgba(79, 70, 229, 0.45);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 14px rgba(79, 70, 229, 0.3);
+  }
+
+  &:disabled {
+    background: #c7d2fe;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}

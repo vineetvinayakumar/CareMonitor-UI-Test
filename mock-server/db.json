@@ -1,0 +1,18 @@
+{
+  "login": [
+    {
+      "email": "test@example.com",
+      "password": "123456",
+      "token": "mock-jwt-token-123",
+      "user": {
+        "email": "test@example.com"
+      }
+    }
+  ],
+  "items": [
+    { "id": 1, "name": "Item One", "description": "First item" },
+    { "id": 2, "name": "Item Two", "description": "Second item" },
+    { "id": 3, "name": "Item Three", "description": "Third item" },
+    { "id": 4, "name": "Item Four", "description": "Fourth item" }
+  ]
+}

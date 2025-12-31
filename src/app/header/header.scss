@@ -1,0 +1,30 @@
+.app-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0 24px;
+
+  .app-title {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.app-content {
+  min-height: calc(100vh - 64px);
+  background-color: #f4f6fb;
+  padding: 32px;
+}
+
+.app-title {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0;
+  min-width: auto;
+  text-transform: none;
+}

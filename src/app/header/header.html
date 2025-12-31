@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <button
+    mat-button
+    routerLink="/"
+    class="app-title"
+  >
+    CareMonitor
+  </button>
+
+  <span class="spacer"></span>
+
+  <button mat-button (click)="logout()">Logout</button>
+</mat-toolbar>
+
+<div class="app-content">
+  <router-outlet></router-outlet>
+</div>

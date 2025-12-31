@@ -1,0 +1,93 @@
+// Variables
+$bg-page: #f4f6fb;
+$text-muted: #6b7280;
+$primary-shadow: rgba(0, 0, 0, 0.08);
+
+.dashboard-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0 24px;
+
+  .app-title {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+
+  .logout-btn {
+    font-weight: 500;
+    text-transform: none;
+  }
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.dashboard-container {
+  min-height: calc(100vh - 64px);
+  padding: 32px;
+  background-color: $bg-page;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  .welcome-card {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 14px;
+    padding-bottom: 8px;
+    animation: slideUp 0.35s ease-out;
+
+    mat-card-header {
+      margin-bottom: 8px;
+
+      mat-card-title {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      mat-card-subtitle {
+        font-size: 14px;
+        color: $text-muted;
+      }
+    }
+
+    mat-card-content {
+      .user-info {
+        font-size: 15px;
+        color: #374151;
+
+        strong {
+          font-weight: 600;
+        }
+      }
+    }
+
+    mat-card-actions {
+      margin-top: 12px;
+
+      .action-btn {
+        height: 42px;
+        padding: 0 20px;
+        font-weight: 500;
+        border-radius: 8px;
+        text-transform: none;
+        box-shadow: 0 6px 16px $primary-shadow;
+      }
+    }
+  }
+}
+
+/* Entrance animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
